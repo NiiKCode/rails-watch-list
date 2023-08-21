@@ -1,0 +1,11 @@
+<div class ="container">
+  <h1> My movie lists </h1>
+  <ul>
+    <% @lists.each do |list| %>
+      <li><%= link_to list.name, list_path(list) %></li>
+    <% end %>
+  </ul>
+
+<p> <%= link_to "Add new list", new_list_path, class: 'btn btn-success' %> </p>
+
+</div>

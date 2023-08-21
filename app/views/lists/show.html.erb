@@ -1,0 +1,13 @@
+<h2><%= @list.name %></h2>
+
+<ul>
+  <% @list.bookmarks.each do |bookmark| %>
+    <li>
+      <%= image tag bookmark.movie.poster_url, alt bookmark.mvoie.title, width 200 %>
+      <%= bookmark.movie.title %>
+      <%= bookmark.comment %>
+    </li>
+<% end %>
+</ul>
+
+<p><%= link_to "Back to movie lists", lists_path, class: 'btn btn-success' %></p>
